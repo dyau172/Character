@@ -8,11 +8,11 @@ namespace Character
 
         public int Gold;
 
-        public Player(string name, int health, int defence, int damage, int experience, int gold){
+        public Player(string name, int health, int defence, int attack,  int experience, int gold){
             Name = name;
             Health = health;
             Defence = defence;
-            Damage = damage;
+            Attack = attack;
             Experience = experience;
             Gold = gold;
 

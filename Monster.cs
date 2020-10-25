@@ -4,11 +4,11 @@ namespace Character {
     class Monster : Character {
         public string Type;
 
-        public Monster (string name, int health, int defence, int damage, string type) {
+        public Monster (string name, int health, int defence, int attack, string type) {
             Name = name;
             Health = health;
             Defence = defence;
-            Damage = damage;
+            Attack = attack;
             Type = type;
 
         }
