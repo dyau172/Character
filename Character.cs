@@ -21,7 +21,7 @@ namespace Character {
 
         public void Damage ()
         {
-            int damage = new Random().Next(5,20);
+            int damage = new Random().Next(5,30);
             Health -= damage;
         }
 
