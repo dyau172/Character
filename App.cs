@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Character {
     class App {
@@ -6,17 +7,37 @@ namespace Character {
         Player player = new Player ("Hero", 100, 20, 0, 0, 0);
         Monster monster = new Monster ("John", 100, 10, 0, "Penguin");
 
-        public void Run () {
-            player.DisplayStats ();
-            player.Damage ();
-            player.DisplayStats ();
-            player.Damage ();
-            player.DisplayStats ();
+         public void DeadChar(){
+            if (player.Health == 0){
+                Console.WriteLine("Player died");
+                
+            }else{
+                Console.WriteLine("Monster died");
+            }
+        }
 
-            Console.WriteLine ();
-            monster.DisplayStats ();
+        public void Run () {
+          
+           
+
+           do{
+               Console.WriteLine("--------------");
+               player.Damage();
+               player.DisplayStats();
+               
+               monster.Damage();
+               monster.DisplayStats();
+
+               
+           }
+           while(player.Health > 0 && monster.Health > 0 );
+           
+               Console.WriteLine("bye bye");
+               DeadChar();
 
         }
+
+        
 
     }
 
