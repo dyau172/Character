@@ -5,7 +5,7 @@ namespace Character {
     class Character {
         public string Name { get; set; }
 
-        int health = 100;
+        int health;
         public int Health {
             get{return health;}
             set {
@@ -27,6 +27,7 @@ namespace Character {
 
         public void Damage () {
             int damage = new Random ().Next (5, 30);
+            
             Health -= damage;
         }
 
